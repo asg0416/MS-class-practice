@@ -1,0 +1,22 @@
+{% extends 'base.html' %} <!--template 상속,확장하는 경우에는 extends를 먼저 작성해줍니다.-->
+{% load static %}  <!--static 요소들을 가져오기 위해서 load해줍니다.-->
+
+
+
+
+{%block title %} 
+
+{%endblock%}
+<!-- base.html에서 만들었던 title block부분에 각 페이지별로 다른 title을 입려해줄수 있습니다. -->
+
+
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{%endblock%}
+
+
+
+{% block contents %}
+
+{%endblock%}

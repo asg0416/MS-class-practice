@@ -1,0 +1,19 @@
+{% extends 'base.html' %} <!--template 상속,확장하는 경우에는 extends를 먼저 작성해줍니다.-->
+{% load static %}  <!--static 요소들을 가져오기 위해서 load해줍니다.-->
+
+
+{%block title %} 
+기업 공고 작성
+{%endblock%}
+
+
+{% block contents %}
+<h1>기업 공고 등록</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{memoform.as_p}}
+    <input type="submit" value="작성"/>
+</form>
+
+{%endblock%}
