@@ -17,7 +17,7 @@ def create(request):
     context=dict()
     context['camform'] = CamForm()
     if request.method =="POST":
-        myform = CamForm(request.POST.request.FILES)
+        myform = CamForm(request.POST, request.FILES)
         if myform.is_valid():
             myform.save()
             return redirect('index')

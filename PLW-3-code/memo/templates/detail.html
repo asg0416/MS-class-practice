@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<h1>상세페이지</h1>
+<a href="{% url 'update' one_memo.id %}">수정</a>
+<a href="{% url 'delete' one_memo.id %}">삭제</a>
+
+
+<h2>제목 : {{one_memo.title}}</h2>
+{% if i.pic %}
+<img src="{{one_memo.pic.url}}"/>
+{%endif%}
+<p>본문 : {{one_memo.desc}}</p>
+<p>작성일 : {{one_memo.created_at}}</p>
+
+
+    
+{%endblock%}
