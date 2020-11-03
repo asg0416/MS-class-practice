@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import UserInfo
 from .forms import CamForm
 
@@ -23,4 +23,4 @@ def create(request):
             return redirect('index')
         else:
             context['camform']= myform
-    return render(request,'second.html',context)
+    return render(request,'create.html',context)
